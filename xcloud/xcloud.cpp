@@ -1,31 +1,31 @@
-#include "scc.h"
+#include "xcloud.h"
 #include "translator.h"
 #include "paths.h"
 #include "log.h"
 #include "db.h"
 #include "util.h"
 
-QString CloudClient::version;
-QString CloudClient::clientId;
-QString CloudClient::hardwareId;
-QLocale::Language CloudClient::lang = QLocale::English;
+QString XCloud::version;
+QString XCloud::clientId;
+QString XCloud::hardwareId;
+QLocale::Language XCloud::lang = QLocale::English;
 
-CloudClient::CloudClient():login(NULL),main(NULL){
+XCloud::XCloud():login(NULL),main(NULL){
 
 }
 
-CloudClient::~CloudClient(){
+XCloud::~XCloud(){
     if(login != NULL)
         delete login;
     if(main != NULL)
         delete main;
 }
 
-void CloudClient::startup(){
+void XCloud::startup(){
 
 }
 
-bool CloudClient::globalInit(QApplication &a){
+bool XCloud::globalInit(QApplication &a){
 
     Logger::init(Logger::LOG_INFO);
 
@@ -49,18 +49,18 @@ bool CloudClient::globalInit(QApplication &a){
     return true;
 }
 
-QString CloudClient::getVersion(){
+QString XCloud::getVersion(){
     return version;
 }
 
-QString CloudClient::getClientId(){
+QString XCloud::getClientId(){
     return clientId;
 }
 
-QString CloudClient::getHardwareId(){
+QString XCloud::getHardwareId(){
     return hardwareId;
 }
 
-QLocale::Language CloudClient::getLang(){
+QLocale::Language XCloud::getLang(){
     return lang;
 }

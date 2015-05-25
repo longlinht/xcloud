@@ -5,11 +5,11 @@
 #include <QString>
 #include <QLocale>
 
-class CloudClient {
+class XCloud {
 public:
 
-    CloudClient();
-    ~CloudClient();
+    XCloud();
+    ~XCloud();
 
     void startup();
 

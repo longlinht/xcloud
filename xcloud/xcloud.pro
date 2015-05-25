@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui sql network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -13,8 +13,22 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    util.cpp \
+    translator.cpp \
+    preferences.cpp \
+    paths.cpp \
+    log.cpp \
+    db.cpp \
+    xcloud.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    util.h \
+    translator.h \
+    preferences.h \
+    paths.h \
+    log.h \
+    db.h \
+    xcloud.h
 
 FORMS    += mainwindow.ui
