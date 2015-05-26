@@ -9,7 +9,7 @@ DatabaseManager::DatabaseManager(){
 
 QSqlError DatabaseManager::init(){
     QString path(QDir::homePath());
-    path.append(QDir::separator()).append("scc.db");
+    path.append(QDir::separator()).append("xcloud.db");
     path = QDir::toNativeSeparators(path);
 
     QFile dbFile(path);

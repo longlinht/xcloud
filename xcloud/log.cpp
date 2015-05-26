@@ -8,14 +8,14 @@ Logger::logverb Logger::verb = Logger::LOG_INFO;
 
 bool Logger::init(logverb v){
     verb = v;
-    file = new QFile("scc.log");
+    file = new QFile("xcloud.log");
     return file->open(QIODevice::WriteOnly | QIODevice::Append);
 }
 
 void Logger::log(logverb v, QString msg){
     if(file->size() >= maxlog){
         file->close();
-        file->rename("scc.log","scc" + Util::timeNumberSerial() + ".log");
+        file->rename("xcloud.log","scc" + Util::timeNumberSerial() + ".log");
         close();
         init(verb);
     }

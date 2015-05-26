@@ -11,7 +11,7 @@ Paths::Paths(){
 
 void Paths::initPaths(){
     appPath = QApplication::applicationDirPath();
-    dataPath = QDir::homePath() + QString("/SCC");
+    dataPath = QDir::homePath() + QString("/xcloud");
 }
 
 QString Paths::applicationPath(){
@@ -47,7 +47,7 @@ QString Paths::translationPath(){
 }
 
 QString Paths::configPath(){
-    return dataPath + QString("/scc.ini");
+    return dataPath + QString("/xcloud.ini");
 }
 
 

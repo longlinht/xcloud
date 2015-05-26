@@ -20,6 +20,7 @@ SOURCES += main.cpp\
     paths.cpp \
     log.cpp \
     db.cpp \
+	constants.cpp \
     xcloud.cpp
 
 HEADERS  += mainwindow.h \
@@ -29,6 +30,7 @@ HEADERS  += mainwindow.h \
     paths.h \
     log.h \
     db.h \
+	constants.h \
     xcloud.h
 
 FORMS    += mainwindow.ui
